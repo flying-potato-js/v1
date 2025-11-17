@@ -17,10 +17,12 @@ Go to [flying-potato.pages.dev](https://flying-potato.pages.dev), to find out mo
 1. Go to your html/js file.
 2. In this repo, go to [`src`](src)
 3. For HTML enter this `<script>` tag:
+   
    ```html
    <script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/[file_location]">
    ```
-4. For JS enter this
+5. For JS use the `require()` function
+
    ```js
    const utils = require('https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/[file_location]');
    ```
