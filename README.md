@@ -18,9 +18,9 @@ Go to [flying-potato.pages.dev](https://flying-potato.pages.dev), to find out mo
 2. In this repo, go to [`src`](src)
 3. For HTML enter this `<script>` tag:
    ```html
-   <script src="https://jsdelivr">
+   <script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/[file_location]">
    ```
 4. For JS enter this
    ```js
-   const utils = require([location of files]);
+   const utils = require('https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/[file_location]');
    ```
