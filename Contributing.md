@@ -1,6 +1,6 @@
-# Contributing to Flying Potato JS
+# Contributing to Flying Potato
 
-Thank you for considering contributing to Flying Potato JS! Your support and involvement help this project thrive[web:2][web:4].
+Thank you for considering contributing to Flying Potato JS! Your support and involvement help this project thrive.
 
 ## Table of Contents
 - [How to Contribute](#how-to-contribute)
@@ -18,7 +18,7 @@ There are many ways to contribute:
 - Reporting bugs
 - Suggesting features or enhancements
 - Improving documentation
-- Contributing code or examples[web:4]
+- Contributing code or examples
 
 Check existing issues and pull requests first to avoid duplication. Discuss ideas in an issue before starting!
 
@@ -41,7 +41,7 @@ Check existing issues and pull requests first to avoid duplication. Discuss idea
 - Ensure your code passes all tests and add new ones if needed.
 - Reference related issues with keywords (e.g., `Fixes #123`).
 - Fill out the PR template with a summary and context.
-- Respond to feedback and update your PR as needed[web:2][web:3].
+- Respond to feedback and update your PR as needed.
 
 ## Development Environment
 
@@ -49,14 +49,14 @@ Instructions for setup:
 1. Clone the repo:  
    `git clone https://github.com/yourusername/flying-potato-js.git`
 2. Open the project in your editor.
-3. For local testing, use a simple HTTP server like `python3 -m http.server` or your editor's live preview[web:2].
+3. For local testing, use a simple HTTP server like `python3 -m http.server` or your editor's live preview.
 4. No build tools or npm steps required—Flying Potato JS is static-ready.
 
 Refer to the README for more details.
 
 ## Community and Conduct
 
-Be kind, respectful, and constructive in all communications. See the `CODE_OF_CONDUCT.md` for more info, if present[web:4].
+Be kind, respectful, and constructive in all communications. See the `CODE_OF_CONDUCT.md` for more info, if present.
 
 ## License
 
@@ -68,4 +68,4 @@ Open an issue for questions, or reach out to a maintainer as listed in the READM
 
 ---
 
-By following these guidelines, you help keep Flying Potato JS robust and welcoming to all contributors[web:2][web:3][web:5].
+By following these guidelines, you help keep Flying Potato JS robust and welcoming to all contributors.
