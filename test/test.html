@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><title>JS CDN Tests</title>
+<style>
+body { font-family: sans-serif; padding:20px; line-height:1.4; }
+button { margin:5px 0; }
+</style>
+</head>
+<body>
+
+<h1>CDN JS Files Test Page</h1>
+
+<button onclick="testSelector()">Test Selector</button>
+<button onclick="testDebounce()">Test Debounce</button>
+<button onclick="testCookie()">Test Cookie</button>
+<button onclick="testTooltip()">Test Tooltip</button>
+<button onclick="testSmoothScroll()">Test Smooth Scroll</button>
+<button onclick="testModal()">Test Modal</button>
+<button onclick="testAnim()">Test Animate</button>
+<button onclick="testConfetti()">Test Confetti</button>
+<button onclick="testCSV()">Test CSV Parser</button>
+<button onclick="testQuery()">Test Query String</button>
+<button onclick="testLogger()">Test Logger</button>
+<button onclick="testDetect()">Test Detect</button>
+<button onclick="testFocus()">Test Focus Outline</button>
+<button onclick="testSkip()">Test Skip Button</button>
+
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/Selector.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/Debounce.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/Cookie.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/Tooltip.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/SmoothScroll.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/Modal.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/Anim.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/Confetti.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/CSVParser.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/QueryString.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/Logger.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/Detect.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/FocusOutline.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/SkipContent.js"></script>
+
+<script>
+function testSelector() {
+  document.body.style.background="#eef";
+  alert($('body').length ? "Selector works" : "Selector failed");
+}
+function testDebounce() {
+  let count=0, fn=debounce(()=>{count++;alert("Debounced: "+count);},300);
+  for(let i=0;i<5;i++) fn();
+}
+function testCookie() {
+  cookie.set('test','hello',1);
+  alert(cookie.get('test')||'Cookie fail');
+  cookie.del('test');
+}
+function testTooltip() {
+  let div=document.createElement('div');
+  div.textContent='Hover me for tooltip';
+  div.setAttribute('data-tip','Tooltip text');
+  document.body.appendChild(div);
+}
+function testSmoothScroll() {
+  let a=document.createElement('a'); a.href='#'; a.textContent='Scroll to top'; document.body.appendChild(a);
+  a.setAttribute('href','#top');
+  let target=document.createElement('div'); target.id='top'; target.style.marginTop='1000px'; document.body.appendChild(target);
+}
+function testModal() {
+  showModal('<h2>Hello Modal</h2>');
+}
+function testAnim() {
+  const el=document.createElement('div');
+  el.textContent='Fade me in/out'; document.body.appendChild(el);
+  el.style.background='yellow'; el.style.padding='10px'; el.style.margin='10px 0';
+  fadeToggle(el); setTimeout(()=>fadeToggle(el), 1500);
+}
+function testConfetti() {
+  confetti();
+}
+function testCSV() {
+  let csv='name,age\nAlice,30\nBob,25';
+  alert(JSON.stringify(parseCSV(csv)));
+}
+function testQuery() {
+  alert(JSON.stringify(qs));
+}
+function testLogger() {
+  log.info('Info message'); log.warn('Warning!'); log.error('Error!');
+}
+function testDetect() {
+  alert('Dark mode supported: '+isDarkMode);
+}
+function testFocus() {
+  document.body.className=''; // reset
+  document.body.innerHTML+= '<div tabindex=0 style="margin-top:20px;padding:10px;background:#ccc;">Focus me</div>';
+  focusin=? "Focus outline toggle"; // placeholder
+}
+function testSkip() {
+  alert('Skip link added at top'); // uses the script
+}
+</script>
+</body>
+</html>
