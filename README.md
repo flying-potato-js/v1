@@ -6,8 +6,6 @@
 
 ## What is Flying Potato
 
-
-
 Go to [flying-potato.pages.dev](https://flying-potato.pages.dev), to find out more.
 
 ## Getting started
@@ -26,3 +24,10 @@ Go to [flying-potato.pages.dev](https://flying-potato.pages.dev), to find out mo
    ```js
    const utils = require('https://cdn.jsdelivr.net/gh/flying-potato-js/v1@main/src/[file_location]');
    ```
+
+> [!TIP]
+> If you want the CDN to be minified, use `[file].min.js
+
+## Contributing
+
+Please report any issues or bugs in the [issues tab](https://github.com/flying-potato-js/v1/issues). To suggest features, use the [discussions tab](https://github.com/flying-potato-js/v1/discussions). If you want to do PRs, check out [CONTRIBUTING](CONTRIBUTING.md).
